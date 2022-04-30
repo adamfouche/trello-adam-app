@@ -1,6 +1,6 @@
-# Trello clone app using ReactJS, Node JS, Express and MongoDB (MERN Stack)
+# :snowflake: Trello clone app using ReactJS, Node JS, Express and MongoDB (MERN Stack)
 
-# Installation
+# :snowflake: Installation
 
 ```
 $ git clone https://github.com/adamfouche/trello-adam-app.git
@@ -10,7 +10,7 @@ $ npm start
 
 ```
 
-# Author: Adam Fouche
+# :snowflake: Author: Adam Fouche
 
 _Happy coding !_
 ###### If you like this readme file, please give me star! :sparkling_heart:
