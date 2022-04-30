@@ -13,4 +13,4 @@ $ npm start
 # Author: Adam Fouche
 
 _Happy coding !_
-###### If you like this readme file, please give me star! heart
+###### If you like this readme file, please give me star! :sparkling_heart:
