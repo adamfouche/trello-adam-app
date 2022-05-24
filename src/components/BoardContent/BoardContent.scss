@@ -22,18 +22,48 @@
     margin: 5px 45px 5px 5px;
   }
   .add-new-column {
+    width: 250px;
     color: #fff;
     margin-left: $gap;
     line-height: 32px;
-    height: 32px;
+    // height: 32px;
     border-radius: $column-border-radius;
     padding: 4px 0 4px 15px;
-    width: 250px;
+    max-width: 250px;
+    margin-right: $gap;
     background-color: hsla(0, 0%, 100%, .24);
     cursor: pointer;
     &:hover {
     background-color: hsla(0, 0%, 100%, .34);
-
+    }
+  }
+  .enter-new-column {
+    width: 250px;
+    max-width: 250px;
+    background-color: $column-bg-color;
+    // margin: 0 $gap;
+    // height: 42px;
+    line-height: 32px;
+    padding: 4px;
+    margin-left: $gap;
+    border-radius: $column-border-radius;
+    input.input-enter-new-column {
+      margin-bottom: 4px;
+    }
+    span.cancel-new-column {
+      // background-color: #ccc;
+      margin-left: $gap;
+      // padding: 4px;
+      cursor: pointer;
+      .icon {
+        font-size: 20px;
+        color: $alert-color;
+        position: relative;
+        top: 2px;
+        &:hover {
+          color: darken($alert-color,15);
+        }
+      }
     }
   }
 }
