@@ -40,4 +40,21 @@ body {
     outline: none !important;
     box-shadow: none !important;
   }
+  span.cancel-icon {
+    margin-left: $gap;
+    // padding: 4px;
+    cursor: pointer;
+    .icon {
+      font-size: 20px;
+      color: $alert-color;
+      position: relative;
+      top: 2px;
+      &:hover {
+        color: darken($alert-color,15);
+      }
+    }
+  }
+  input:focus, textarea:focus, select:focus{
+    outline: none;
+  }
 }
