@@ -23,8 +23,18 @@ const BoardContent = () => {
   const [board, setBoard] = useState({})
   const [columns, setColumns] = useState([])
   const [openNewColumnForm, setOpenNewColumnForm] = useState(false)
+  const ToggleCreateNewForm = () => {
+    setOpenNewColumnForm(!openNewColumnForm)
+  }
   const [newColumnTitle, setNewColumnTitle] = useState('')
   const enterListRef = useRef(null)
+  useEffect(() => {
+    if (enterListRef && enterListRef.current) {
+      enterListRef.current.focus()
+      enterListRef.current.select()
+    }
+  }, [openNewColumnForm])
+
   const onNewColumnTitleChange = useCallback(
     (e) => setNewColumnTitle(e.target.value),
     []
@@ -50,13 +60,6 @@ const BoardContent = () => {
     }
   }, [])
 
-  useEffect(() => {
-    if (enterListRef && enterListRef.current) {
-      enterListRef.current.focus()
-      enterListRef.current.select()
-    }
-  }, [openNewColumnForm])
-
   if (isEmpty(board)) {
     return <div className='notfound'>Board not found</div>
   }
@@ -80,9 +83,7 @@ const BoardContent = () => {
       setColumns(newColumns)
     }
   }
-  const ToggleCreateNewForm = () => {
-    setOpenNewColumnForm(!openNewColumnForm)
-  }
+
   const addNewColumn = () => {
     if (!newColumnTitle) {
       enterListRef.current.focus()
@@ -108,7 +109,6 @@ const BoardContent = () => {
     setOpenNewColumnForm(false)
   }
   const onUpdateColumn = (newColumnToUpdate) => {
-    // console.log(newColumnToUpdate)
     const columnIdToUpdate = newColumnToUpdate.id
     let newColumns = [...columns]
     const columnIndexUpdate = newColumns.findIndex(
@@ -128,7 +128,6 @@ const BoardContent = () => {
     setColumns(newColumns)
     setBoard(newBoard)
   }
-
   return (
     <div className='board-content'>
       <Container
@@ -180,7 +179,7 @@ const BoardContent = () => {
                 Add list
               </Button>{' '}
               <span
-                className='cancel-new-column'
+                className='cancel-icon'
                 onClick={() => setOpenNewColumnForm(false)}
               >
                 <i className='fa fa-trash icon' />

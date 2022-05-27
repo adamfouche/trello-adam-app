@@ -49,21 +49,7 @@
     border-radius: $column-border-radius;
     input.input-enter-new-column {
       margin-bottom: 4px;
-    }
-    span.cancel-new-column {
-      // background-color: #ccc;
-      margin-left: $gap;
-      // padding: 4px;
-      cursor: pointer;
-      .icon {
-        font-size: 20px;
-        color: $alert-color;
-        position: relative;
-        top: 2px;
-        &:hover {
-          color: darken($alert-color,15);
-        }
-      }
+      border: none;
     }
   }
 }
